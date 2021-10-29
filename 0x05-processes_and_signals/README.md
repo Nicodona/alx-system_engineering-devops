@@ -1,0 +1,1 @@
+# this repo explains she script of how processes and signals are 
