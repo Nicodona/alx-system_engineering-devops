@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# Bash script that displays the content of the file /etc/passwd
-# Must use the while loop
-
-while IFS= read -r L; do
-    echo "$L" | cut -d':' -f1,4,7
-done < /etc/passwd
+# Displays contents of /etc/passwd with read n cut
+exec 3< /etc/passwd
+while read -u 3; do
+	echo "$REPLY" | cut -d':' -f1,3,6
+done
