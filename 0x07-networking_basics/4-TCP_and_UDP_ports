@@ -1,2 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash                                                             
+# Displays listening ports with flags                                           
 netstat --listening --program
+
+
